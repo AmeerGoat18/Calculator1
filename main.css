@@ -1,0 +1,164 @@
+/*remove default browser margin settings*/
+body{
+  
+    background-color: yellow;
+    margin: 0;
+}
+/*Container for the whole calculator layout*/
+#container{
+    
+   width: 1000px;
+    height: 550px;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(lol.jpg);
+    margin: 20px auto;
+}
+#containerr{
+    background-color: rgb(106, 160, 160);
+    height: 500px;
+    width: 300px;
+    box-shadow: 0 0 50px 5px hsla(0, 0%, 0%, .5),
+                -2px -2px 8px rgb(36, 23, 23);
+    border-radius: 24px;
+    position: relative;
+   top: 10px;
+}
+
+
+.screen{
+    background-color: #FFFF99;
+    width: 270px;
+    height: 60px;
+    border-radius: 8px;
+    position: relative;
+    top: 26PX;
+    /*left: 15px;*/
+}
+
+
+.screen input{
+    position: relative;
+    height: 56px;
+    width: 266px;
+    color: black;
+    background-color: #e5dfa0;
+    font-size: 25px;
+    text-align: right;
+    border-radius: 8px;
+    border: solid rgb(133, 133, 133) 2px;
+
+}
+.btns{
+    position: relative;
+    top: 30px;
+    /*left: 3px;*/
+}
+.button{
+    width: 44px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.button.black{
+    color: #fff;
+    background-color: black;
+    border-bottom: 2px solid #647489;
+    border-top: 2px solid black;
+
+}
+.button.silver{
+    color: #fff;
+    background-color: #515c6b;
+    border-bottom: 2px solid black;
+}
+.button.red{
+    color: #FFF;
+    background-color: rgb(236, 34, 8);
+    border-bottom: 2px solid black;
+}
+nav{
+  background: #151515;
+  padding: 5px 40px;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+  padding: 15px 0;
+  cursor: pointer;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+nav ul li a{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: cyan;
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
+  display: none;
+}
+nav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+@media all and (max-width: 900px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
